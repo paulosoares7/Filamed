@@ -3,19 +3,18 @@ import { LatLngExpression } from 'leaflet';
 import { NavLink } from 'react-router-dom';
 import './styles.css'
 import L from 'leaflet';
-
-// Importar as imagens dos ícones do Leaflet
-import markerIcon from 'leaflet/dist/images/marker-icon.png';
-import markerShadow from 'leaflet/dist/images/marker-shadow.png';
-
-// Importar o CSS do Leaflet
 import 'leaflet/dist/leaflet.css';
 
-// Corrigir os caminhos dos ícones
-L.Icon.Default.mergeOptions({
-    iconUrl: markerIcon,
-    shadowUrl: markerShadow,
-  });
+// Importar sua imagem personalizada
+import customMarkerIcon from '../../assets/maker.png';
+
+// Criar o ícone personalizado
+const customIcon = new L.Icon({
+  iconUrl: customMarkerIcon, // Caminho da imagem
+  iconSize: [38, 38], // Tamanho do ícone [largura, altura]
+  iconAnchor: [19, 38], // Ponto de ancoragem do ícone [x, y]
+  popupAnchor: [0, -38], // Ponto onde o popup será ancorado [x, y]
+});
   
 interface MarkerData {
     id: number;
@@ -44,14 +43,14 @@ export function SimpleMap (){
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
              {markerData.map((marker) => (
-                <Marker key={marker.id} position={marker.position}>
+                <Marker key={marker.id} position={marker.position} icon={customIcon}>
                     <Popup>
                         <span>💊 </span>
                         <span>{marker.popupText}</span>
                     </Popup>
                 </Marker>
             ))}
-            <Marker position={[-3.0992852261011365, -60.013774567729136]}>
+            <Marker position={[-3.0992852261011365, -60.013774567729136]}  icon={customIcon}>
                     <Popup>
                         <span>💊 </span>
                         <NavLink to="28-de-agosto" target="_blank" rel="noopener noreferrer">{'Hospital e Pronto Socorro 28 de Agosto'}</NavLink>
