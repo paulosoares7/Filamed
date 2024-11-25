@@ -1,10 +1,10 @@
 [build]
-base = "."
-command = "yarn build"
-publish = "./build/"
-
+  command = "yarn build"  # O comando para build do projeto
+  publish = "dist"        # O diretório de saída para publicação
+  base = "/"              # A pasta base do repositório (geralmente "/")
 
 [[redirects]]
-from = "/*"
-to = "index.html"
-status = 200
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
