@@ -1,0 +1,326 @@
+/* Resetando estilos padrões */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Corpo da página */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f9f9;
+  color: #333;
+  line-height: 1.6;
+  max-width: 1600px;
+  margin: 0 auto;
+
+  
+}
+
+/* Cabeçalho */
+header {
+  background-color: #009688;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  margin: 0 auto;
+  height: 100vh;
+  max-height: 15rem;
+}
+
+header h1 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Barra de Navegação */
+nav {
+  background-color: #00332e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  scroll-behavior: smooth; 
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #00796b;
+}
+
+/* Seções */
+section {
+  padding: 60px 20px;
+}
+
+  
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}
+
+
+/* Seção Sobre o FILAMED */
+#informacoes h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #004d40;
+  margin-bottom: 20px;
+}
+
+#informacoes p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+#informacoes ul {
+  list-style-type: disc;
+  margin-left: 40px;
+}
+
+#informacoes li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Seção Encontrar Hospital */
+#mapa {
+  background-color: #e0f2f1;
+  border-radius: 10px;
+}
+
+#mapa h2 {
+  font-size: 32px;
+  color: #004d40;
+  margin-bottom: 20px;
+}
+
+#mapa p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+#mapa button {
+  background-color: #009688;
+  color: #fff;
+  font-size: 18px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#mapa button:hover {
+  background-color: #00796b;
+}
+
+/* Seção de Serviços */
+#servicos {
+  background-color: #ffffff;
+}
+
+#servicos h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #004d40;
+  margin-bottom: 20px;
+}
+
+#servicos ul {
+  list-style-type: square;
+  margin-left: 40px;
+}
+
+#servicos li {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+#servicos li strong {
+  color: #009688;
+}
+
+/* Seção de Perguntas Frequentes */
+#faqs {
+  background-color: #f1f8f7;
+}
+
+.faq-item {
+  background-color: #ffffff;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+  font-size: 24px;
+  color: #004d40;
+}
+
+.faq-item p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Seção de Contato */
+#contato {
+  background-color: #ffffff;
+}
+
+#contato h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #004d40;
+  margin-bottom: 20px;
+}
+
+#contato ul {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+#contato li {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+#contato .social-icons a {
+  font-size: 24px;
+  margin-right: 15px;
+  color: #004d40;
+  transition: color 0.3s ease;
+}
+
+#contato .social-icons a:hover {
+  color: #009688;
+}
+
+/* Rodapé */
+footer {
+  background-color: #004d40;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* Estilos Responsivos */
+@media screen and (max-width: 768px) {
+  header h1 {
+      font-size: 28px;
+  }
+
+  header p {
+      font-size: 16px;
+  }
+
+  nav ul {
+      flex-direction: column;
+      padding: 20px 0;
+      background: black
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+
+  #mapa button {
+      width: 100%;
+  }
+
+  #informacoes ul, #servicos ul {
+      margin-left: 20px;
+  }
+
+  #informacoes li, #servicos li {
+      font-size: 16px;
+  }
+
+  .faq-item h3 {
+      font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header h1 {
+      font-size: 24px;
+  }
+
+  header p {
+      font-size: 14px;
+  }
+
+  nav ul li a {
+      font-size: 16px;
+  }
+
+  #mapa h2, #servicos h2, #faqs h2, #contato h2 {
+      font-size: 28px;
+  }
+
+  #mapa button {
+      padding: 10px 20px;
+      font-size: 16px;
+  }
+
+  .social-icons a {
+      font-size: 20px;
+  }
+}
+.containerMap {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto; 
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.contactMap {
+  width: 90%;
+  max-width: 550px;
+  margin: 0 auto; 
+}
