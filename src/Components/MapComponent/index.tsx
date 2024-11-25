@@ -1,8 +1,22 @@
 import { CircleMarker, MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
-import "leaflet/dist/leaflet.css";
-import './styles.css'
 import { LatLngExpression } from 'leaflet';
 import { NavLink } from 'react-router-dom';
+import './styles.css'
+import L from 'leaflet';
+
+// Importar as imagens dos ícones do Leaflet
+import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerShadow from 'leaflet/dist/images/marker-shadow.png';
+
+// Importar o CSS do Leaflet
+import 'leaflet/dist/leaflet.css';
+
+// Corrigir os caminhos dos ícones
+L.Icon.Default.mergeOptions({
+    iconUrl: markerIcon,
+    shadowUrl: markerShadow,
+  });
+  
 interface MarkerData {
     id: number;
     position: LatLngExpression; 
