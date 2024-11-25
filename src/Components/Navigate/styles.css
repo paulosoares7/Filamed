@@ -61,7 +61,7 @@ nav {
     }
   }
   .menu-toggle {
-    display: none; /* Esconde o botão em telas grandes */
+    display: none; 
     background: none;
     border: none;
     color: white;
@@ -75,10 +75,9 @@ nav {
   }
   
   .menu-toggle:focus {
-    outline: none; /* Remove a borda de foco */
+    outline: none; 
   }
   
-  /* Animação para o ícone do menu hambúrguer */
   .menu-toggle div {
     width: 25px;
     height: 3px;
@@ -87,7 +86,6 @@ nav {
     transition: all 0.3s ease;
   }
   
-  /* Mostrar o ícone do menu hambúrguer em telas pequenas */
   @media (max-width: 768px) {
     .menu-toggle {
       display: block;

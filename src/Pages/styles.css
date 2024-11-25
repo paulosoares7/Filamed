@@ -34,7 +34,6 @@
     border-radius: 8px;
   }
 
- 
 
   .medicineContainer, .equipamentContainer {
     display: flex;
@@ -67,3 +66,84 @@
     background-color: #f8f9fa;
     padding: 10px;
   }
+
+  .back-to-home {
+    background-color: #009688;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .back-to-home:hover {
+    background-color: #00796b;
+    transform: scale(1.05);
+  }
+  
+  .back-to-home:active {
+    transform: scale(0.95);
+  }
+  
+
+  
+  /* Responsividade */
+  
+  @media (max-width: 768px) {
+    header {
+      padding: 15px;
+      font-size: 18px;
+    }
+    .medicineContainer, .equipamentContainer {
+      display: block;
+      align-items: center;
+      justify-content: space-around;
+    
+    }
+  
+    .overview, .inventory, .staff {
+      padding: 15px;
+      margin: 15px auto;
+      max-width: 90%;
+    }
+  
+    .imgStaff {
+      max-width: 90px;
+      max-height: 90px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+  .back-to-home {
+    font-size: 14px;
+    padding: 8px 16px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  
+    .overview, .inventory, .staff {
+      padding: 10px;
+      margin: 10px auto;
+      max-width: 95%;
+    }
+  
+    .imgStaff {
+      max-width: 75px;
+      max-height: 75px;
+    }
+  }
+  

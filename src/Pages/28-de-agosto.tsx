@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './styles.css'
 
 export function VinteEOitoDeAgosto() {
@@ -62,6 +63,9 @@ export function VinteEOitoDeAgosto() {
       <header className="App-header">
         <h1>Hospital 28 de Agosto</h1>
         <p>Bem-vindo ao Hospital 28 de Agosto, onde cuidamos de você com excelência.</p>
+        <Link to="/" className="back-to-home">
+          ⬅ Retornar à Página Inicial
+        </Link>
       </header>
 
       <section className="overview">
